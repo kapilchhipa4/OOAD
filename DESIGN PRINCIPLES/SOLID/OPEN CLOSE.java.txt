@@ -1,0 +1,83 @@
+/* 
+    open for extension but close for modification
+
+*/
+ // bad design
+class Rectangle {
+    double height, width;
+    public Rectangle(int height, int width){
+        this.height = height;
+        this.width = width;
+    }
+}
+class Circle {
+    double radius;
+
+    public void Circle(double radius){
+        this.radius = radius;
+    }
+}
+class AreaCalculator{
+    Object shape;
+    public AreaCalculator(Object shape){
+        this.shape = shape;
+    }
+    public void calculate(){
+
+        if(shape instanceof Rectancle){
+                Rectangle r = (Rectangle) shape;
+                Sop(r.height * r.width);
+        }
+        else if(shape instanceof Circle){
+            Circle c = (Circle) shape;
+            Sop(c.radius * c.radius * 3.14);
+        }
+    }
+}
+
+public class Area{
+    public static void main(String args[]){
+            AreaCalculator rec = new AreaCalculator(new Rectangle(12, 34));
+            rec.calculate();
+    }
+}
+
+
+
+// best approach
+
+class Rectangle {
+    double height, width;
+    public Rectangle(int height, int width){
+        this.height = height;
+        this.width = width;
+    }
+    public void calculateArea(){
+        Sop(height * width);
+    }
+}
+class Circle {
+    double radius;
+
+    public void Circle(double radius){
+        this.radius = radius;
+    }
+     public void calculateArea(){
+        Sop(radius * radius * 3.14);
+    }
+}
+class AreaCalculator{
+  
+    public void calculate(Object shape){
+
+            shape.calculateArea();
+    }
+}
+
+public class Area{
+    public static void main(String args[]){
+            AreaCalculator cal = new AreaCalculator();
+            cal.calculate(new Rectangle(12, 33));
+            cal.calculate(new Circle(33));
+    }
+}
