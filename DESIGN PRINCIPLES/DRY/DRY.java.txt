@@ -1,0 +1,20 @@
+public class Laundry {
+
+    public void washWhiteClothes(){
+
+        System.out.println("putting in white clothes");
+        performCommonTasks();
+    }
+    public void washColorfulClothes(){
+        
+        System.put.println("Putting in colourful clothes")
+        performCommonTasks()
+    }
+    
+    public void performCommonTasks(){
+    // filling water to the washing machine and setting configuration
+    //dranning out water
+    }
+
+}
+// create method for common task instead of writing it multiple places

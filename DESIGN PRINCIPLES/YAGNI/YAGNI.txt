@@ -1,0 +1,16 @@
+YAGNI -------- YOU AREN'T GONNA NEED IT
+
+Dont implement it until you need it
+
+cost of delay 	cost to carry 	cost to repair
+
+when should we implement something?
+ solution 
+    .
+    .
+    .
+    . relevant to 
+    .
+    .
+    .
+ problem

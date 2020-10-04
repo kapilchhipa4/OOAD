@@ -1,0 +1,7 @@
+/* 
+    SINGLE RESPONSIBILITY PRINCIPLE 
+
+    A class should have one, only one reason to change
+    focus on primary RESPONSIBILITY of a class
+
+*/

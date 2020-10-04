@@ -1,0 +1,51 @@
+/* this principle is about writing function/method
+
+function should not be lengthy
+
+Hard to test
+Hard to read
+Hard to remember
+Hard to reuse
+Leads to duplication
+contains many reasons to change
+can't be optimised
+Not developer friendly
+Low cohesion
+High coupling
+Hard to debug
+
+
+SINGLE LEVEL OF ABSTRACTION principle
+
+function should not contain different levels of abstraction!
+
+code within a particular method should be at same level of abstraction.
+
+one reason to change, 
+Easy to read, reuse, test
+*/
+
+public class Slap{
+
+    public static void main(String args[]){
+
+        getDetailsAndMail();
+    }
+        public static void getDetailsAndMail(){
+            // code to fetch details from database(lower level of abstraction)
+            Sop("fetching details from DB");
+            String details = "Details";
+
+            emailtheUser(details);
+
+            //these two lines were violating the slap 
+            // code to email the user
+            //Sop("Mailing to the user");(Higher level of abstraction)
+        }
+        public static void emailtheUser(String details){
+           // code to email the user
+            //Sop("Mailing to the user");(Higher level of abstraction) 
+        }
+    
+}
+

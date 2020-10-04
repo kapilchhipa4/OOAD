@@ -1,0 +1,41 @@
+
+public interface TravelBooking{
+
+    public void bookTicket();
+}
+
+
+class TrainTicket implements TravelBooking{
+
+    public void bookTicket(){
+        System.out.println("Train ticket booked");
+    }
+}
+
+class FlightTicket implements TravelBooking{
+
+    public void bookTicket() {
+        System.out.println("Flight ticket booked");
+    }
+}
+
+class TicketBookingByAgent implements TravelBooking {
+    TravelBooking t;
+
+    public TicketBookingByAgent(TravelBooking t){
+        this.t = t;
+    }
+    public void bookTicket(){
+        t.bookTicket(); // polymorphism 
+    }
+}
+class DelegationDemostration{
+public static void main(String args[]){
+
+    TicketBookingByAgent  agent1 = new TicketBookingByAgent(new FlightTicket());
+    agent1.bookTicket();
+    TicketBookingByAgent  agent2 = new TicketBookingByAgent(new TrainTicket());
+    agent2.bookTicket();
+}
+}
+
